@@ -1,0 +1,30 @@
+{
+  "name": "opidy",
+  "description": "opidy - connecting opportunities",
+  "main": "gulpfile.js",
+  "authors": [
+    "Joseph Rex"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "illustration",
+    "art"
+  ],
+  "homepage": "https://github.com/bl4ckdu5t/easter-bunny",
+  "moduleType": [
+    "globals"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
