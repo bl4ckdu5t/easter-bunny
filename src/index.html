@@ -65,8 +65,10 @@
     </section>
     <div class="header__interactive">
       <p>Get notified when we launch</p>
-      <form method="post" action="" class="header__form">
-        <input type="email" placeholder="Enter your email" required>
+      <form method="post" action="http://formspree.io/info@opidy.com" class="header__form">
+        <input type="hidden" name="_subject" value="New Early Access submission!" />
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <input type="text" name="_gotcha" style="display:none" />
         <button class="button button-primary">Request Early Access</button>
       </form>
     </div>
