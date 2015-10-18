@@ -218,6 +218,10 @@ body{
 			font-size: 1.8rem;
 		}
 	}
+	&__avatar{
+		width: 128px;
+		height: 128px;
+	}
 }
 
 .article{
@@ -227,6 +231,7 @@ body{
 		margin: 15px 0;
 		padding-bottom: 4px;
 		border-bottom: 3px solid $color-brand;
+		.section--how &{ border-bottom: 3px solid #666; }
 		font-weight: 700;
 		color: #333;
 	}
@@ -283,6 +288,7 @@ body{
 		font-weight: 300;
 		font-size: 2rem;
 		border: solid 2px $color-brand;
+		color: $color-brand;
 		border-radius: 20px;
 		text-transform: uppercase;
 		padding: 5px;
