@@ -218,7 +218,7 @@ body{
 		display: inline-block;
 		margin: 15px 0;
 		padding-bottom: 4px;
-		border-bottom: 2px solid $color-brand;
+		border-bottom: 3px solid $color-brand;
 		font-weight: 700;
 		color: #333;
 	}
@@ -227,6 +227,9 @@ body{
 .grid{
 	display: flex;
 	flex-flow: column wrap;
+	justify-content: space-between;
+	margin: 20px 0;
+	padding: 5px;
 	@include breakpoint($breakpoint-iphone-landscape){
 		flex-direction: row;
 	}
@@ -240,12 +243,28 @@ body{
 			flex-direction: row;
 		}
 	}
-	justify-content: space-between;
-	padding: 5px;
 	&-item{
 		flex: 1 40%;
 		height: 200px;
 		margin: 5px;
-		background: $color-brand;
+		background: #ddd;
+		padding: 20px 10px;
+		color: #444;
+		text-align: center;
+		.icon{
+			width: 48px;
+			height: 48px;
+			fill: #444;
+		}
+		h4{
+			margin: 4px 0;
+			font-size: 2rem;
+		}
+		h5{
+			margin: 8px 0;
+			font-weight: 400;
+			font-size: 1.8rem;
+			line-height: 1;
+		}
 	}
 }
