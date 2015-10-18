@@ -43,13 +43,17 @@ body{
 			}
 		}
 		ul{
-			width: 70%;
-			position: absolute;
-			right: -70%;
-			top: -6px;
-			height: 100vh;
-			background: #444;
-			padding: 10px;
+			display: none;
+			.openNav &{
+				display: block;
+				width: 70%;
+				position: absolute;
+				right: -70%;
+				top: -6px;
+				height: 100vh;
+				background: #444;
+				padding: 10px;
+			}
 			@include breakpoint($breakpoint-tablet-landscape){
 				display: block;
 				position: static;
