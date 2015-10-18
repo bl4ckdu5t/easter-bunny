@@ -1,9 +1,10 @@
 var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin'),
-    //imageResize = require('gulp-image-resize'),
-    //parallel = require('concurrent-transform'),
+    imageResize = require('gulp-image-resize'),
+    parallel = require('concurrent-transform'),
     os = require('os'),
     htmlmin = require('gulp-htmlmin'),
     concat = require('gulp-concat'),
@@ -42,8 +43,10 @@ gulp.task('browser-sync', function(){
 // Concatenate & Minify
 gulp.task('scripts', function(){
   var jsFiles = [
-    './src/components/jquery/dist/jquery.min.js',
-    './src/js/*.js'];
+    './vendor/components/jquery/dist/jquery.min.js',
+    './vendor/components/waypoints/lib/noframework.waypoints.min.js',
+    './src/js/*.js'
+    ];
   return gulp.src(jsFiles)
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))

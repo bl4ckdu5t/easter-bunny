@@ -4,8 +4,28 @@ function ready(cb) {
 		: cb();
 }
 ready(function(){
-	
+	/*======= Waypoints http://imakewebthings.com/waypoints/ ============= */
+  /*if(window.innerWidth > 1240){
+    var waypoint = new Waypoint({
+      element: document.querySelector('.waypoint'),
+      handler: function() {
+        var navbar = document.querySelector('.header__nav');
+        navbar.classList.toggle('fixed');
+      },
+      offset: '70%'
+    });
+  }*/
+  document.getElementById('toggleMenu').addEventListener('click', function(){
+    var el = document.documentElement;
+    el.classList.toggle('openNav');
+  });
+  $('.header__list a').click(function(){
+    if($('html').hasClass('openNav')){
+      $('html').removeClass('openNav');
+    }
+  });
 });
+
 /* Scroll to Hashbanged links */
 (function(){
 var speed = 500;

@@ -1,0 +1,7 @@
+@keyframes rotateWords {
+	0% { opacity: 1; animation-timing-function: ease-in; height: 0px; }
+	8% { opacity: 1; height: 60px; }
+	19% { opacity: 0; height: 60px; }
+	25% { opacity: 0; height: 0; }
+	100% { opacity: 0; }
+}
