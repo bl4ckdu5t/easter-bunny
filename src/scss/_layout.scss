@@ -16,7 +16,7 @@ body{
 }
 .header{
 	height: 600px;
-	background-color: $color-brand;
+	background-color: $color-background;
 	background-image: url(../images/nodes-bg.svg);
 	background-size: cover;
 	background-position: 50%;
@@ -27,7 +27,7 @@ body{
 		@include breakpoint($breakpoint-tablet-landscape){
 			position: static;
 		}
-		background: rgba($color-brand, .6);
+		background: rgba($color-background, .6);
 		border-bottom: solid thin rgba($white, .3);
 		height: 70px;
 		padding: 10px 20px;
@@ -193,6 +193,12 @@ body{
 			top: 2px;
 			right: 2px;
 			padding: 0 20px;
+			background: $color-brand;
+			border-color: $color-brand;
+			&:hover{
+				background: darken($color-brand, 10%);
+				border-color: $color-brand;
+			}
 		}
 	}
 }
@@ -217,10 +223,6 @@ body{
 			margin: 5px 0;
 			font-size: 1.8rem;
 		}
-	}
-	&__avatar{
-		width: 128px;
-		height: 128px;
 	}
 }
 
@@ -260,7 +262,7 @@ body{
 		flex: 1 40%;
 		height: 200px;
 		margin: 5px;
-		background: $color-brand;
+		background: $color-background;
 		padding: 20px 10px;
 		color: $white;
 		text-align: center;
@@ -330,4 +332,71 @@ body{
 		width: 24px;
 		height: 24px;
 	}
+}
+.trays{ padding: 20px 0; }
+.tray{
+	position: relative;
+	min-height: 60px;
+	margin-left: 135px;
+	padding: 0 10px;
+	border-left: solid 2px #555;
+	&::before{
+		content: '';
+		position: absolute;
+		top: 30px;
+		left: -50px;
+		width: 50px;
+		height: 0;
+		border-top: solid 2px #555;
+		background: $red;
+	}
+	&__title{
+		position: absolute;
+		top: 6px;
+		left: -135px;
+		margin: 0;
+		font-size: 1.8rem;
+		text-align: center;
+	}
+}
+.figure{
+	position: absolute;
+	width: 130px;
+	text-align: center;
+	&--ltr{
+		top: 30px;
+		left: 0;
+		@include breakpoint($breakpoint-iphone-landscape){
+			top: 30px;
+			left: 40px;
+		}
+	}
+	&--rtl{
+		top: 380px;
+		right: 0;
+		@include breakpoint($breakpoint-iphone-landscape){
+			top: 300px;
+			right: 40px;
+		}
+	}
+	&__name{
+		margin: 5px 0;
+		font-size: 2rem;
+	}
+	&__avatar{
+		width: 64px;
+		height: 64px;
+		@include breakpoint($breakpoint-iphone-landscape){
+			width: 128px;
+			height: 128px;
+		}
+	}
+}
+.opidy--disc{
+	display: block;
+	margin: 150px auto;
+	width: 240px;
+	height: 240px;
+	text-align: center;
+	animation: spinningWheel 21s linear infinite 0s;
 }

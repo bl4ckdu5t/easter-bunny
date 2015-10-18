@@ -4,6 +4,7 @@
     display: block;
     margin: 0 auto;
   }
+  &-relative{ position: relative; }
   &-fullwidth{ width: 100%; }
   &-inline-block{ display: inline-block; }
   &-invisible{ visibility: hidden; }
