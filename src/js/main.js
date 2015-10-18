@@ -5,16 +5,23 @@ function ready(cb) {
 }
 ready(function(){
 	/*======= Waypoints http://imakewebthings.com/waypoints/ ============= */
-  /*if(window.innerWidth > 1240){
+  var widthLimit = 1023;//1240
+  if(window.innerWidth > widthLimit){
     var waypoint = new Waypoint({
       element: document.querySelector('.waypoint'),
       handler: function() {
-        var navbar = document.querySelector('.header__nav');
+        var navbar = document.querySelector('.header__nav'),
+            logo   = document.querySelector('.header__logo');
         navbar.classList.toggle('fixed');
+        if($('.header__nav').hasClass('fixed')){
+          logo.src = 'dist/images/opidy.png';
+        }else{
+          logo.src = 'dist/images/logo.png';
+        }
       },
       offset: '70%'
     });
-  }*/
+  }
   document.getElementById('toggleMenu').addEventListener('click', function(){
     var el = document.documentElement;
     el.classList.toggle('openNav');

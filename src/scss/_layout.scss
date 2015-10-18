@@ -7,8 +7,6 @@ html{
 body{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5rem;
-  transform: translate3d(0, 0, 0);
-  transition: transform 500ms ease;
   overflow-x: hidden;
   .openNav &{
 		left: 0;
@@ -23,6 +21,7 @@ body{
 	background-size: cover;
 	background-position: 50%;
 	color: rgba($white, .8);
+	padding: .5px 0;
 	&__nav{
 		position: relative;
 		@include breakpoint($breakpoint-tablet-landscape){
