@@ -211,6 +211,13 @@ body{
 }
 
 .section{
+	&::before{
+		display: block;
+		content: " ";
+		margin-top: -240px;
+		height: 285px;
+		visibility: hidden;
+	}
 	&--about.section--about{
 		padding: 40px 0;
 	}
