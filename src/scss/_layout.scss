@@ -361,11 +361,14 @@ body{
 }
 .figure{
 	position: absolute;
-	width: 130px;
+	width: 80px;
+	@include breakpoint($breakpoint-iphone-landscape){
+		width: 130px;
+	}
 	text-align: center;
 	&--ltr{
 		top: 30px;
-		left: 0;
+		left: -20px;
 		@include breakpoint($breakpoint-iphone-landscape){
 			top: 30px;
 			left: 40px;
@@ -373,7 +376,7 @@ body{
 	}
 	&--rtl{
 		top: 380px;
-		right: 0;
+		right: -20px;
 		@include breakpoint($breakpoint-iphone-landscape){
 			top: 300px;
 			right: 40px;
@@ -389,6 +392,29 @@ body{
 		@include breakpoint($breakpoint-iphone-landscape){
 			width: 128px;
 			height: 128px;
+		}
+	}
+	&__interests{
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		.figure--rtl &{
+			bottom: 20px;
+			left: -235px;
+		}
+		.figure--ltr &{
+			top: 40px;
+			right: -235px;
+		}
+		li{
+			display: inline;
+			border: solid thin #555;
+			margin-left: 5px;
+			padding: 2px;
+			&.mutual{
+				border: solid 2px #888;
+				padding: 4px;
+			}
 		}
 	}
 }
