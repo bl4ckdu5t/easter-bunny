@@ -193,11 +193,11 @@ body{
 			top: 2px;
 			right: 2px;
 			padding: 0 20px;
-			background: $color-brand;
-			border-color: $color-brand;
+			background: #1B6373;
+			border-color: #1B6373;
 			&:hover{
-				background: darken($color-brand, 10%);
-				border-color: $color-brand;
+				background: darken(#1B6373, 10%);
+				border-color: #1B6373;
 			}
 		}
 	}
@@ -285,8 +285,9 @@ body{
 		h5{
 			margin: 10px 0 8px;
 			font-weight: 400;
-			font-size: 1.8rem;
-			line-height: 1;
+			font-size: 1.5rem;
+			letter-spacing: 1.5px;
+			line-height: 1.5;
 		}
 	}
 }
@@ -420,7 +421,8 @@ body{
 			margin-left: 5px;
 			padding: 2px;
 			&.mutual{
-				border: solid 2px #888;
+				border: solid 2px $color-brand;
+				color: $color-brand;
 				padding: 4px;
 			}
 		}
@@ -434,3 +436,4 @@ body{
 	text-align: center;
 	animation: spinningWheel 21s linear infinite 0s;
 }
+.red{ color: $color-brand; }
